@@ -14,4 +14,4 @@
 -------
 
 
-想要每天找适合自己难度的题的可以用这个网站:[code rating](https://zerotrac.github.io/leetcode_problem_rating/#/)，里面每个题目都有难度分，对应力扣的竞赛分等级，大家根据自己的竞赛水平选择即可。
+想要每天找适合自己难度的题的可以用这个网站: [code rating](https://zerotrac.github.io/leetcode_problem_rating/#/)，里面每个题目都有难度分，对应力扣的竞赛分等级，大家根据自己的竞赛水平选择即可。

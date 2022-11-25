@@ -53,4 +53,19 @@ func main() {
 	//截断前面的部分会导致cap降低
 	fmt.Printf("slice4 len is %d and cap is %d \n", len(slice4), cap(slice4))
 
+	//slice的复制
+	sl_from := []int{1, 2, 3}
+	sl_to := make([]int, 10)
+
+	n := copy(sl_to, sl_from)
+	fmt.Println(sl_to)
+	fmt.Printf("Copied %d elements\n", n)
+
+	//slice的追加
+	sl := []int{1, 2, 3}
+	sl = append(sl, 4)
+	fmt.Println(sl)
+	sl = append(sl, sl_from...)
+	fmt.Println(sl)
+
 }

@@ -3,6 +3,7 @@ package leetcode
 func lengthOfLongestSubstring(s string) int {
 	//key记录字符 val记录其最后一次出现的位置
 	rcd := make(map[byte]int)
+	// rcd := map[byte]int{}
 
 	begin := 0
 	res := 0
