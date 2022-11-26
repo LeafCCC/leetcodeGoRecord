@@ -6,13 +6,13 @@ func convert(s string, numRows int) string {
 		return s
 	}
 
-	res := ""
-
 	n := len(s)
+
+	res := make([]byte, 0, n)
 
 	//第一行
 	for i := 0; i < n; i += 2*numRows - 2 {
-		res += s[i : i+1]
+		res = append(res, s[i])
 	}
 
 	//中间行
@@ -20,7 +20,7 @@ func convert(s string, numRows int) string {
 		count := 1
 		now := i
 		for now < n {
-			res += s[now : now+1]
+			res = append(res, s[now])
 
 			if count%2 == 1 {
 				now += 2*numRows - 2 - 2*i
@@ -33,8 +33,8 @@ func convert(s string, numRows int) string {
 
 	//最后一行
 	for i := numRows - 1; i < n; i += 2*numRows - 2 {
-		res += s[i : i+1]
+		res = append(res, s[i])
 	}
 
-	return res
+	return string(res)
 }
