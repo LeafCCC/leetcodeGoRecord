@@ -19,8 +19,33 @@ func main() {
 	a = a + b
 	fmt.Println(a)
 
+	//另一种拼接 这种效率更高
+	t = []byte(a)
+	t = append(t, b...)
+	a = string(t)
+	fmt.Println(a)
+
 	s := "  abcd   "
 	//删除开头和结尾的空格
 	s = strings.TrimSpace(s)
 	fmt.Println(s)
+
+	// t1 := "a"
+	// t2 := "b"
+	// start := time.Now()
+	// for i := 0; i <= 10_0000; i++ {
+	// 	t1 = t1 + t2
+	// }
+	// fmt.Println(time.Now().Sub(start))
+
+	// t1 = "a"
+	// start = time.Now()
+	// t = []byte(t1)
+	// for i := 0; i <= 100_0000; i++ {
+
+	// 	t = append(t, t2...)
+
+	// }
+	// t1 = string(t)
+	// fmt.Println(time.Now().Sub(start))
 }

@@ -1,7 +1,10 @@
 // 切片在内存中的组织方式实际上是一个有 3 个域的结构体：指向相关数组的指针，切片长度len以及切片容量cap
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func doSomething(s []int) {
 	s[0] = -1
@@ -67,5 +70,16 @@ func main() {
 	fmt.Println(sl)
 	sl = append(sl, sl_from...)
 	fmt.Println(sl)
+
+	//排序
+	test1 := []int{5, 4, 8, 7, 9, 1, 2, 3, 1}
+	sort.Ints(test1)
+	fmt.Println(test1)
+	sort.Sort(sort.Reverse(sort.IntSlice(test1))) //倒序
+	fmt.Println(test1)
+
+	test2 := []string{"abc", "a", "b", "A", "B", "ABC", "ab"}
+	sort.Strings(test2)
+	fmt.Println(test2)
 
 }
