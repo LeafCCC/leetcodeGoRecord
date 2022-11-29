@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -30,22 +31,30 @@ func main() {
 	s = strings.TrimSpace(s)
 	fmt.Println(s)
 
-	// t1 := "a"
-	// t2 := "b"
-	// start := time.Now()
-	// for i := 0; i <= 10_0000; i++ {
-	// 	t1 = t1 + t2
-	// }
-	// fmt.Println(time.Now().Sub(start))
+	t1 := "a"
+	t2 := "b"
+	start := time.Now()
+	for i := 0; i <= 10_0000; i++ {
+		t1 = t1 + t2
+	}
+	fmt.Println(time.Now().Sub(start))
 
-	// t1 = "a"
-	// start = time.Now()
-	// t = []byte(t1)
-	// for i := 0; i <= 100_0000; i++ {
+	t1 = "a"
+	start = time.Now()
+	for i := 0; i <= 10_0000; i++ {
+		t1 += t2
+	}
+	fmt.Println(time.Now().Sub(start))
 
-	// 	t = append(t, t2...)
+	t1 = "a"
+	start = time.Now()
+	t = []byte(t1)
+	for i := 0; i <= 100_0000; i++ {
 
-	// }
-	// t1 = string(t)
-	// fmt.Println(time.Now().Sub(start))
+		t = append(t, t2...)
+
+	}
+	t1 = string(t)
+	fmt.Println(time.Now().Sub(start))
+
 }
