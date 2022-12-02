@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	//两种初始化方式
 	record := make(map[string]int)
-	record["a"] = 1
+	record["a"]++ //这样也可以 即使key不存在 则为默认值
 
 	record2 := map[string]int{"b": 2}
 	fmt.Println(record["a"], record2["b"])
@@ -26,5 +26,7 @@ func main() {
 	for key, val := range map3 {
 		fmt.Println("key is", key, ", val is", val)
 	}
+
+	fmt.Println(len(map3))
 
 }
