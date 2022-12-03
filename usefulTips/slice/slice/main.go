@@ -82,4 +82,16 @@ func main() {
 	sort.Strings(test2)
 	fmt.Println(test2)
 
+	//二维切片
+	const q = 2
+	dp1 := make([][q]int, q)
+	fmt.Println(dp1)
+
+	//如果不用常量来定义
+	n = 2
+	dp2 := make([][]int, n)
+	for i := range dp2 {
+		dp2[i] = make([]int, n)
+	}
+	fmt.Println(dp2)
 }
