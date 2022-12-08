@@ -8,6 +8,7 @@ type Account struct {
 }
 
 // 改变输入输出并返回目前净收入
+// 要改变struct内的值必须使用指针 *Account
 func (this *Account) change(in int, out int) int {
 	this.income += in
 	this.outcome += out
