@@ -94,4 +94,11 @@ func main() {
 		dp2[i] = make([]int, n)
 	}
 	fmt.Println(dp2)
+
+	//二维切片的排序
+	var intervals = [][]int{{2, 3}, {1, 2}, {4, 5}, {-1, 4}}
+	sort.Slice(intervals, func(i, j int) bool {
+		return intervals[i][0] < intervals[j][0]
+	})
+	fmt.Println(intervals)
 }
