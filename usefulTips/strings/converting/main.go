@@ -11,4 +11,6 @@ func main() {
 
 	b := strconv.Itoa(12322222222222)
 	fmt.Println(b)
+
+	fmt.Println(string(123))
 }
