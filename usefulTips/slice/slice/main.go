@@ -101,4 +101,9 @@ func main() {
 		return intervals[i][0] < intervals[j][0]
 	})
 	fmt.Println(intervals)
+
+	//删除某元素
+	deleteT := []int{1, 2, 3, 4, 5}
+	deleteT = append(deleteT[:4], deleteT[5:]...)
+	fmt.Println(deleteT)
 }

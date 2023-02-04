@@ -5,8 +5,6 @@
 
 | 文件夹名 | 含义 | 
 | :-----:| :----: | 
-| contestRecord | 竞赛对应的现场代码记录 | 
-| contestStar | 竞赛中认为值得收藏的题目 |
 | numberNormal | 力扣序号题目中已经做掉的题 | 
 | numberStar | 思路有趣或者值得多次练习的题型 | 
 | usefulTips | 一些有用的小技巧 | 
