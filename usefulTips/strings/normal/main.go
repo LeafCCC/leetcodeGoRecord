@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"time"
+	"unicode/utf8"
 )
 
 func main() {
@@ -56,5 +57,9 @@ func main() {
 	}
 	t1 = string(t)
 	fmt.Println(time.Now().Sub(start))
+
+	var hun = "混元形意太极拳a"
+	fmt.Printf("hun 占用 %d 个字符数\n", utf8.RuneCountInString(hun))
+	fmt.Printf("hun 占用 %d 个字节数\n", len([]byte(hun)))
 
 }
