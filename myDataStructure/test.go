@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"myDataStructure/stack"
+	"myDataStructure/myStack"
 )
 
 func main() {
-
-	a := stack.Stack{}
+	//stack
+	a := myStack.Stack{}
 	a.Push(1)
 	a.Push(2)
 	a.Push(3)
@@ -21,4 +21,8 @@ func main() {
 		fmt.Println(val)
 	}
 
+	// h := &intHeap{5, 4, 2, 3, 1}
+	// fmt.Println(*h)
+	// heap.Init(h)
+	// fmt.Println(*h)
 }
