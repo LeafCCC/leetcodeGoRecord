@@ -6,12 +6,14 @@ import (
 )
 
 func main() {
-	ch := make(chan string)
+	ch := make(chan string, 1)
 
-	go sendData(ch)
-	//go getData(ch)
-
+	ch <- "1"
 	fmt.Println(<-ch)
+
+	func(x string) {
+		fmt.Println(x)
+	}("test")
 
 	time.Sleep(1e9)
 }
