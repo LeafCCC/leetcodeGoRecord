@@ -20,6 +20,8 @@ func filter(in, out chan int, prime int) {
 	}
 }
 
+// 这里可以看成是一个个通道的串联 即 ch1->ch2->ch3 有点链表的意思
+// 每个通道负责筛一下 能通过所有通道的输出并形成一个新的筛除通道
 func main() {
 	ch := make(chan int)
 	go generate(ch)
