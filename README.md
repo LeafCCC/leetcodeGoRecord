@@ -1,8 +1,6 @@
 ### LeafCCC力扣的go刷题记录
 ----
 
-力扣主页：[LeafCCC的力扣主页](https://leetcode.cn/u/leafccc/)
-
 | 文件夹名 | 含义 | 
 | :-----:| :----: | 
 | numberNormal | 力扣序号题目中已经做掉的题 | 
