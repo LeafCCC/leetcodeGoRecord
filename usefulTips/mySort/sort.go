@@ -88,6 +88,30 @@ func Merge(nums []int, mid, begin, end int) {
 }
 
 // 快速排序——平均O(nlgn)算法 最坏n²
+// func QuickSort(nums []int, begin, end int) {
+// 	if begin < end {
+// 		pivot := Partition(nums, begin, end)
+// 		QuickSort(nums, begin, pivot-1)
+// 		QuickSort(nums, pivot+1, end)
+// 	}
+// }
+
+// func Partition(nums []int, begin, end int) int {
+// 	r := rand.Intn(end-begin+1) + begin
+// 	nums[r], nums[end] = nums[end], nums[r]
+// 	target := nums[end]
+// 	where := begin
+
+// 	for i := begin; i < end; i++ {
+// 		if nums[i] < target {
+// 			nums[i], nums[where] = nums[where], nums[i]
+// 			where++
+// 		}
+// 	}
+
+//		nums[end], nums[where] = nums[where], nums[end]
+//		return where
+//	}
 func QuickSort(nums []int, begin, end int) {
 	if begin < end {
 		pivot := Partition(nums, begin, end)
@@ -103,7 +127,7 @@ func Partition(nums []int, begin, end int) int {
 	where := begin
 
 	for i := begin; i < end; i++ {
-		if nums[i] < target {
+		if target > nums[i] {
 			nums[i], nums[where] = nums[where], nums[i]
 			where++
 		}
